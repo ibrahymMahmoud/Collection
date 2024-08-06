@@ -27,6 +27,30 @@ namespace Assignment
 
     }
 
+    public class Employee
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+
+        public Employee()
+        {
+            this.id = 0;
+            this.name = "no name";
+        }
+
+        public Employee(int id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
+
+        public override string ToString()
+        {
+            return $"Id = {this.id} , Name = {this.name}";
+        }
+
+    }
+
 
     internal class Program
     {
@@ -181,37 +205,60 @@ namespace Assignment
             //Implement a SortedDictionary that stores student IDs (int) and their names (string).
             //Perform operations like adding, removing, and retrieving student names.
 
-           ///  Student student01 = new Student(0 , "hema");
-           ///  Student student02 = new Student(1, "hamo");
-           ///  Student student03 = new Student(3, "hamam");
-           ///  Student student04 = new Student(4, "hamody");
-           /// 
-           /// 
-           ///  SortedDictionary<int , Student> students = new SortedDictionary<int , Student>()
-           ///  {
-           ///      { 0 , student01  },
-           ///      { 1 , student02 },
-           ///      { 2 , student03 },
-           ///      { 3 , student04 },
-           ///  };
-           /// 
-           ///  Student student05 = new Student ( 5 , "hany");
-           ///  if (students.ContainsKey(5))
-           ///      students[5] = student05;
-           ///  else 
-           ///      students.Add(5, student05);
-           /// 
-           ///  students.Remove(5);
-           /// 
-           ///  foreach(Student student in students.Values)
-           ///      Console.WriteLine(student);
-           /// 
-           ///  students.Clear();
-           /// 
+            ///  Student student01 = new Student(0 , "hema");
+            ///  Student student02 = new Student(1, "hamo");
+            ///  Student student03 = new Student(3, "hamam");
+            ///  Student student04 = new Student(4, "hamody");
+            /// 
+            /// 
+            ///  SortedDictionary<int , Student> students = new SortedDictionary<int , Student>()
+            ///  {
+            ///      { 0 , student01  },
+            ///      { 1 , student02 },
+            ///      { 2 , student03 },
+            ///      { 3 , student04 },
+            ///  };
+            /// 
+            ///  Student student05 = new Student ( 5 , "hany");
+            ///  if (students.ContainsKey(5))
+            ///      students[5] = student05;
+            ///  else 
+            ///      students.Add(5, student05);
+            /// 
+            ///  students.Remove(5);
+            /// 
+            ///  foreach(Student student in students.Values)
+            ///      Console.WriteLine(student);
+            /// 
+            ///  students.Clear();
+            /// 
 
 
 
 
+            #endregion
+
+            #region Q07
+            //Create an employee directory where employee IDs (int) are keys and employee names (string) are values.
+            //Use a SortedList to manage and retrieve employees in order of their IDs.
+
+          ///  Employee Employee01 = new Employee(0 , "hema");
+          ///  Employee Employee02 = new Employee(1, "hamo");
+          ///  Employee Employee03 = new Employee(3, "hamam");
+          ///  Employee Employee04 = new Employee(4, "hamody");
+          ///
+          ///  SortedDictionary<int, string> Employees = new SortedDictionary<int, string>()
+          ///  {
+          ///      { Employee01.id  , Employee01.name },
+          ///      { Employee02.id  , Employee02.name },
+          ///      { Employee03.id  , Employee03.name },
+          ///      { Employee04.id  , Employee04.name },
+          ///  };
+          ///
+          ///  foreach (var employee in Employees )
+          ///  {
+          ///      Console.WriteLine($"id = {employee.Key} , name = {employee.Value}");
+          ///  }
             #endregion
         }
 
