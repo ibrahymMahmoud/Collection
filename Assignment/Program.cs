@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace Assignment
 {
@@ -289,20 +290,55 @@ namespace Assignment
             #region Q09
             //You  have a list of integers with possible duplicates, create a HashSet that contains only unique values.
 
-           /// List<int> numbers = new List<int> { 1, 2, 3, 2, 4, 5, 3, 6 };
-           /// Console.WriteLine("possible dublicates values:");
-           /// foreach (int num in numbers)
-           /// {
-           ///     Console.WriteLine(num);
-           /// }
-           ///
-           /// HashSet<int> uniqueNumbers = new HashSet<int>(numbers);
-           ///
-           /// Console.WriteLine("Unique values:");
-           /// foreach (int num in uniqueNumbers)
-           /// {
-           ///     Console.WriteLine(num);
-           /// }
+            /// List<int> numbers = new List<int> { 1, 2, 3, 2, 4, 5, 3, 6 };
+            /// Console.WriteLine("possible dublicates values:");
+            /// foreach (int num in numbers)
+            /// {
+            ///     Console.WriteLine(num);
+            /// }
+            ///
+            /// HashSet<int> uniqueNumbers = new HashSet<int>(numbers);
+            ///
+            /// Console.WriteLine("Unique values:");
+            /// foreach (int num in uniqueNumbers)
+            /// {
+            ///     Console.WriteLine(num);
+            /// }
+
+            #endregion
+
+            #region Q10
+            //You have a hashtable with unique values, create a new hashtable where the keys and values are swapped.
+
+          ///  Hashtable hashtable = new Hashtable()
+          ///  {
+          ///      { 0 , "value 10" },
+          ///      { 1 , "value 99" },
+          ///      { 2 , "value 15" },
+          ///      { 3 , "value 30" },
+          ///      { 4 , "value 20" },
+          ///      { 5 , "value 12" }
+          ///  };
+          ///
+          ///  Hashtable hashtable2 = new Hashtable();
+          ///  foreach(DictionaryEntry item in hashtable)
+          ///  {
+          ///      hashtable2.Add(item.Value ?? " no value", item.Key);
+          ///  }
+          ///
+          ///  Console.WriteLine("before swaped hashTable");
+          ///
+          ///  foreach (DictionaryEntry item in hashtable)
+          ///  {
+          ///      Console.WriteLine($"key = {item.Key} , value = {item.Value}");
+          ///  }
+          ///  Console.WriteLine("--------------------------");
+          ///  Console.WriteLine("swaped hashTable");
+          ///
+          ///  foreach (DictionaryEntry item in hashtable2)
+          ///  {
+          ///      Console.WriteLine( $"key = {item.Key} , value = {item.Value}");
+          ///  }
 
             #endregion
 
