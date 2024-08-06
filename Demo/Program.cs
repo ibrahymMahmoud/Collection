@@ -122,7 +122,7 @@ namespace Demo
         }
     }
 
-    class Movie : IEquatable<Movie> 
+    class Movie : IEquatable<Movie> , IComparable<Movie>
     {
         public int id { get; set; }
         public string name { get; set; }
@@ -146,6 +146,10 @@ namespace Demo
             return $"id = {this.id} , name = {this.name} , price = {this.price}";
         }
 
+        public int CompareTo(Movie? other)
+        {
+            return this?.id.CompareTo(other?.id) ?? (other?.id == null ? 0 : -1 );
+        }
     }
 
 
@@ -357,61 +361,85 @@ namespace Demo
             #endregion
 
             #region HashSet - methods
-          ///  // Create a HashSet
-          ///  HashSet<int> numbers = new HashSet<int> { 1, 2, 3, 4, 5 };
-          ///
-          ///  // Add an element
-          ///  numbers.Add(6);
-          ///  Console.WriteLine(string.Join(", ", numbers)); // Output: 1, 2, 3, 4, 5, 6
-          ///
-          ///  // Remove an element
-          ///  numbers.Remove(3);
-          ///  Console.WriteLine(string.Join(", ", numbers)); // Output: 1, 2, 4, 5, 6
-          ///
-          ///  // Check if an element exists
-          ///  Console.WriteLine(numbers.Contains(4)); // Output: true
-          ///  Console.WriteLine(numbers.Contains(3)); // Output: false
-          ///
-          ///  // Clear the HashSet
-          ///  numbers.Clear();
-          ///  Console.WriteLine(string.Join(", ", numbers)); // Output: (empty)
-          ///
-          ///  // Create a new HashSet from an array
-          ///  int[] array = { 1, 2, 3, 4, 5 };
-          ///  HashSet<int> newNumbers = new HashSet<int>(array);
-          ///  Console.WriteLine(string.Join(", ", newNumbers)); // Output: 1, 2, 3, 4, 5
-          ///
-          ///  // Union two HashSets
-          ///  HashSet<int> set1 = new HashSet<int> { 1, 2, 3 };
-          ///  HashSet<int> set2 = new HashSet<int> { 2, 3, 4 };
-          ///  set1.UnionWith(set2);
-          ///  Console.WriteLine(string.Join(", ", set1)); // Output: 1, 2, 3, 4
-          ///
-          ///  // Intersect two HashSets
-          ///  set1 = new HashSet<int> { 1, 2, 3 };
-          ///  set2 = new HashSet<int> { 2, 3, 4 };
-          ///  set1.IntersectWith(set2);
-          ///  Console.WriteLine(string.Join(", ", set1)); // Output: 2, 3
-          ///
-          ///  // Difference between two HashSets
-          ///  set1 = new HashSet<int> { 1, 2, 3 };
-          ///  set2 = new HashSet<int> { 2, 3, 4 };
-          ///  set1.ExceptWith(set2);
-          ///  Console.WriteLine(string.Join(", ", set1)); // Output: 1
-          ///
-          ///  // Check if a HashSet is a subset of another
-          ///  set1 = new HashSet<int> { 1, 2, 3 };
-          ///  set2 = new HashSet<int> { 2, 3, 4 };
-          ///  Console.WriteLine(set1.IsSubsetOf(set2)); // Output: false
-          ///  Console.WriteLine(set2.IsSupersetOf(set1)); // Output: false
-          ///
-          ///  // Iterate through a HashSet
-          ///  foreach (int num in newNumbers)
-          ///  {
-          ///      Console.Write(num + " "); // Output: 1 2 3 4 5
-          ///  }
+            ///  // Create a HashSet
+            ///  HashSet<int> numbers = new HashSet<int> { 1, 2, 3, 4, 5 };
+            ///
+            ///  // Add an element
+            ///  numbers.Add(6);
+            ///  Console.WriteLine(string.Join(", ", numbers)); // Output: 1, 2, 3, 4, 5, 6
+            ///
+            ///  // Remove an element
+            ///  numbers.Remove(3);
+            ///  Console.WriteLine(string.Join(", ", numbers)); // Output: 1, 2, 4, 5, 6
+            ///
+            ///  // Check if an element exists
+            ///  Console.WriteLine(numbers.Contains(4)); // Output: true
+            ///  Console.WriteLine(numbers.Contains(3)); // Output: false
+            ///
+            ///  // Clear the HashSet
+            ///  numbers.Clear();
+            ///  Console.WriteLine(string.Join(", ", numbers)); // Output: (empty)
+            ///
+            ///  // Create a new HashSet from an array
+            ///  int[] array = { 1, 2, 3, 4, 5 };
+            ///  HashSet<int> newNumbers = new HashSet<int>(array);
+            ///  Console.WriteLine(string.Join(", ", newNumbers)); // Output: 1, 2, 3, 4, 5
+            ///
+            ///  // Union two HashSets
+            ///  HashSet<int> set1 = new HashSet<int> { 1, 2, 3 };
+            ///  HashSet<int> set2 = new HashSet<int> { 2, 3, 4 };
+            ///  set1.UnionWith(set2);
+            ///  Console.WriteLine(string.Join(", ", set1)); // Output: 1, 2, 3, 4
+            ///
+            ///  // Intersect two HashSets
+            ///  set1 = new HashSet<int> { 1, 2, 3 };
+            ///  set2 = new HashSet<int> { 2, 3, 4 };
+            ///  set1.IntersectWith(set2);
+            ///  Console.WriteLine(string.Join(", ", set1)); // Output: 2, 3
+            ///
+            ///  // Difference between two HashSets
+            ///  set1 = new HashSet<int> { 1, 2, 3 };
+            ///  set2 = new HashSet<int> { 2, 3, 4 };
+            ///  set1.ExceptWith(set2);
+            ///  Console.WriteLine(string.Join(", ", set1)); // Output: 1
+            ///
+            ///  // Check if a HashSet is a subset of another
+            ///  set1 = new HashSet<int> { 1, 2, 3 };
+            ///  set2 = new HashSet<int> { 2, 3, 4 };
+            ///  Console.WriteLine(set1.IsSubsetOf(set2)); // Output: false
+            ///  Console.WriteLine(set2.IsSupersetOf(set1)); // Output: false
+            ///
+            ///  // Iterate through a HashSet
+            ///  foreach (int num in newNumbers)
+            ///  {
+            ///      Console.Write(num + " "); // Output: 1 2 3 4 5
+            ///  }
             #endregion
 
+            #region Generic Collections - SortedSet (BBST)
+
+          ///  SortedSet<int> s = new SortedSet<int>() { 1 ,5,2,85,85,2,5,6,2,5,93,2,8,2,0,0,4,4,5};
+          ///  foreach (int i in s) Console.WriteLine(i);
+          ///
+          ///  // in sortedlist must key implement IComparable
+          ///
+          ///  SortedSet<Movie> movies = new SortedSet<Movie>() 
+          ///  {
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=5 , name = "avatar" , price = 100},
+          ///      new Movie (){id=5 , name = "heloos" , price = 100},
+          ///      new Movie (){id=6 , name = "doblea" , price = 100},
+          ///      new Movie (){id=6 , name = "venous" , price = 100},
+          ///  
+          ///  };
+          ///  foreach (Movie i in movies) Console.WriteLine(i);
+          ///
+
+            #endregion
 
         }
     }
