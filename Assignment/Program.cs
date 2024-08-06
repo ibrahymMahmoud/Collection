@@ -2,6 +2,32 @@
 
 namespace Assignment
 {
+
+    public class Student 
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+
+        public Student() 
+        {
+            this.id = 0;
+            this.name = "no name";
+        }
+
+        public Student(int id , string name)
+        {
+             this.id = id;
+            this.name = name;
+        }
+
+        public override string ToString()
+        {
+            return $"Id = {this.id} , Name = {this.name}";
+        }
+
+    }
+
+
     internal class Program
     {
         static void Main(string[] args)
@@ -128,26 +154,64 @@ namespace Assignment
             #region Q05
             //Given an array of integers, check if the array contains any duplicates.
 
-          ///  int[] nums1 = { 1, 2, 3, 4, 5, 1, 2, 3, 4, };
-          ///  int[] nums = { 1, 2, 3, 4, 5 };
-          ///
-          ///  bool flag = false;
-          ///  for (int i = 0; i < nums.Length -1 ; i++)
-          ///  {
-          ///      for (int j = i + 1; j < nums.Length; j++)
-          ///      {
-          ///          if (nums[i] == nums[j])
-          ///             {
-          ///              flag = true;
-          ///              break;
-          ///          }
-          ///      }
-          ///  }
-          ///
-          ///  if (flag)
-          ///      Console.WriteLine("their is duplicates values");
-          ///  else 
-          ///      Console.WriteLine("no duplicates values");
+            ///  int[] nums1 = { 1, 2, 3, 4, 5, 1, 2, 3, 4, };
+            ///  int[] nums = { 1, 2, 3, 4, 5 };
+            ///
+            ///  bool flag = false;
+            ///  for (int i = 0; i < nums.Length -1 ; i++)
+            ///  {
+            ///      for (int j = i + 1; j < nums.Length; j++)
+            ///      {
+            ///          if (nums[i] == nums[j])
+            ///             {
+            ///              flag = true;
+            ///              break;
+            ///          }
+            ///      }
+            ///  }
+            ///
+            ///  if (flag)
+            ///      Console.WriteLine("their is duplicates values");
+            ///  else 
+            ///      Console.WriteLine("no duplicates values");
+            #endregion
+
+            #region Q06
+
+            //Implement a SortedDictionary that stores student IDs (int) and their names (string).
+            //Perform operations like adding, removing, and retrieving student names.
+
+           ///  Student student01 = new Student(0 , "hema");
+           ///  Student student02 = new Student(1, "hamo");
+           ///  Student student03 = new Student(3, "hamam");
+           ///  Student student04 = new Student(4, "hamody");
+           /// 
+           /// 
+           ///  SortedDictionary<int , Student> students = new SortedDictionary<int , Student>()
+           ///  {
+           ///      { 0 , student01  },
+           ///      { 1 , student02 },
+           ///      { 2 , student03 },
+           ///      { 3 , student04 },
+           ///  };
+           /// 
+           ///  Student student05 = new Student ( 5 , "hany");
+           ///  if (students.ContainsKey(5))
+           ///      students[5] = student05;
+           ///  else 
+           ///      students.Add(5, student05);
+           /// 
+           ///  students.Remove(5);
+           /// 
+           ///  foreach(Student student in students.Values)
+           ///      Console.WriteLine(student);
+           /// 
+           ///  students.Clear();
+           /// 
+
+
+
+
             #endregion
         }
 
