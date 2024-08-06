@@ -264,27 +264,49 @@ namespace Assignment
             #region Q08
             //Given an array of integers from 1 to N with some numbers missing, find the missing numbers
 
-           ///  int[] nums = { 13, 14, 15, 1, 2, 3, 5, 6, 8,  10, 11, 12};
-           ///  int n = 15;
-           /// 
-           ///  HashSet<int> set = new HashSet<int>(nums);
-           ///  HashSet<int> missing = new HashSet<int>();
-           /// 
-           /// 
-           /// 
-           ///  for (int i = 1 ; i < n+1 ; i++)
-           ///  {
-           ///      if( !set.Contains(i))
-           ///          missing.Add(i);
-           ///  }
-           /// 
-           ///  Console.WriteLine("missing numbers:");
-           ///  if (missing.Count > 0)
-           ///      foreach (int i in missing)
-           ///          Console.WriteLine(i);
-           ///  else
-           ///      Console.WriteLine("no missing numbers");
+            ///  int[] nums = { 13, 14, 15, 1, 2, 3, 5, 6, 8,  10, 11, 12};
+            ///  int n = 15;
+            /// 
+            ///  HashSet<int> set = new HashSet<int>(nums);
+            ///  HashSet<int> missing = new HashSet<int>();
+            /// 
+            /// 
+            /// 
+            ///  for (int i = 1 ; i < n+1 ; i++)
+            ///  {
+            ///      if( !set.Contains(i))
+            ///          missing.Add(i);
+            ///  }
+            /// 
+            ///  Console.WriteLine("missing numbers:");
+            ///  if (missing.Count > 0)
+            ///      foreach (int i in missing)
+            ///          Console.WriteLine(i);
+            ///  else
+            ///      Console.WriteLine("no missing numbers");
             #endregion
+
+            #region Q09
+            //You  have a list of integers with possible duplicates, create a HashSet that contains only unique values.
+
+           /// List<int> numbers = new List<int> { 1, 2, 3, 2, 4, 5, 3, 6 };
+           /// Console.WriteLine("possible dublicates values:");
+           /// foreach (int num in numbers)
+           /// {
+           ///     Console.WriteLine(num);
+           /// }
+           ///
+           /// HashSet<int> uniqueNumbers = new HashSet<int>(numbers);
+           ///
+           /// Console.WriteLine("Unique values:");
+           /// foreach (int num in uniqueNumbers)
+           /// {
+           ///     Console.WriteLine(num);
+           /// }
+
+            #endregion
+
+
         }
 
 
