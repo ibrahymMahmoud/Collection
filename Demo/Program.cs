@@ -219,15 +219,21 @@ namespace Demo
             // different between sortedlist and sorteddictionary
             // sorteddictionary is more faster take O(logn)
             // list is two array.
-          ///  SortedList<string , int > keyValuePairs = new SortedList<string , int>()
-          ///  {
-          ///      { "ahmed" , 5652 } ,
-          ///      { "zaina" , 7458 } ,
-          ///      { "marim" , 5654 }
-          ///  };
-          ///
-          ///  foreach(var key in keyValuePairs)
-          ///      Console.WriteLine(key.Key);
+            ///  SortedList<string , int > keyValuePairs = new SortedList<string , int>()
+            ///  {
+            ///      { "ahmed" , 5652 } ,
+            ///      { "zaina" , 7458 } ,
+            ///      { "marim" , 5654 }
+            ///  };
+            ///
+            ///  foreach(var key in keyValuePairs)
+            ///      Console.WriteLine(key.Key);
+            #endregion
+
+            #region SortedDictionary Vs SortedList
+            // dictionary more performance take O(1) the best if no need sorting
+            // sortedDictionary if need sorting in add and remove take O(logn) ,  search take O(logn) // best in operation adding and deleting from sorted list
+            // sortedList if need sorting in insert and update O(n)  in search take O(logn) // the best if need sorting and search
             #endregion
 
         }
