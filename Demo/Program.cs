@@ -329,32 +329,89 @@ namespace Demo
             #endregion
 
             #region HashSet - Constructors
-           /// //their 6 constructors overloading
-           ///
-           /// // prameterless constructor
-           /// HashSet<int> mySet01 = new HashSet<int>();
-           ///
-           /// // Constructor that takes an IEnumerable<T>
-           /// List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
-           /// HashSet<int> mySet02 = new HashSet<int>(numbers);
-           ///
-           /// // Constructor that takes an IEnumerable<T> and an IEqualityComparer<T>
-           /// Dictionary<string, int> data = new Dictionary<string, int>
-           /// {
-           ///     {"apple", 1 },
-           ///     {"banana", 2 },
-           ///     {"cherry", 3 }
-           /// };
-           ///
-           /// //Constructor that takes capacity
-           ///
-           /// int capacity=  5 ;
-           /// HashSet<int> mySet03 = new HashSet<int>( capacity) { };
-           ///
-           /// // constructor take enmerator and capacity
+            /// //their 6 constructors overloading
+            ///
+            /// // prameterless constructor
+            /// HashSet<int> mySet01 = new HashSet<int>();
+            ///
+            /// // Constructor that takes an IEnumerable<T>
+            /// List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+            /// HashSet<int> mySet02 = new HashSet<int>(numbers);
+            ///
+            /// // Constructor that takes an IEnumerable<T> and an IEqualityComparer<T>
+            /// Dictionary<string, int> data = new Dictionary<string, int>
+            /// {
+            ///     {"apple", 1 },
+            ///     {"banana", 2 },
+            ///     {"cherry", 3 }
+            /// };
+            ///
+            /// //Constructor that takes capacity
+            ///
+            /// int capacity=  5 ;
+            /// HashSet<int> mySet03 = new HashSet<int>( capacity) { };
+            ///
+            /// // constructor take enmerator and capacity
 
-           
+
             #endregion
+
+            #region HashSet - methods
+          ///  // Create a HashSet
+          ///  HashSet<int> numbers = new HashSet<int> { 1, 2, 3, 4, 5 };
+          ///
+          ///  // Add an element
+          ///  numbers.Add(6);
+          ///  Console.WriteLine(string.Join(", ", numbers)); // Output: 1, 2, 3, 4, 5, 6
+          ///
+          ///  // Remove an element
+          ///  numbers.Remove(3);
+          ///  Console.WriteLine(string.Join(", ", numbers)); // Output: 1, 2, 4, 5, 6
+          ///
+          ///  // Check if an element exists
+          ///  Console.WriteLine(numbers.Contains(4)); // Output: true
+          ///  Console.WriteLine(numbers.Contains(3)); // Output: false
+          ///
+          ///  // Clear the HashSet
+          ///  numbers.Clear();
+          ///  Console.WriteLine(string.Join(", ", numbers)); // Output: (empty)
+          ///
+          ///  // Create a new HashSet from an array
+          ///  int[] array = { 1, 2, 3, 4, 5 };
+          ///  HashSet<int> newNumbers = new HashSet<int>(array);
+          ///  Console.WriteLine(string.Join(", ", newNumbers)); // Output: 1, 2, 3, 4, 5
+          ///
+          ///  // Union two HashSets
+          ///  HashSet<int> set1 = new HashSet<int> { 1, 2, 3 };
+          ///  HashSet<int> set2 = new HashSet<int> { 2, 3, 4 };
+          ///  set1.UnionWith(set2);
+          ///  Console.WriteLine(string.Join(", ", set1)); // Output: 1, 2, 3, 4
+          ///
+          ///  // Intersect two HashSets
+          ///  set1 = new HashSet<int> { 1, 2, 3 };
+          ///  set2 = new HashSet<int> { 2, 3, 4 };
+          ///  set1.IntersectWith(set2);
+          ///  Console.WriteLine(string.Join(", ", set1)); // Output: 2, 3
+          ///
+          ///  // Difference between two HashSets
+          ///  set1 = new HashSet<int> { 1, 2, 3 };
+          ///  set2 = new HashSet<int> { 2, 3, 4 };
+          ///  set1.ExceptWith(set2);
+          ///  Console.WriteLine(string.Join(", ", set1)); // Output: 1
+          ///
+          ///  // Check if a HashSet is a subset of another
+          ///  set1 = new HashSet<int> { 1, 2, 3 };
+          ///  set2 = new HashSet<int> { 2, 3, 4 };
+          ///  Console.WriteLine(set1.IsSubsetOf(set2)); // Output: false
+          ///  Console.WriteLine(set2.IsSupersetOf(set1)); // Output: false
+          ///
+          ///  // Iterate through a HashSet
+          ///  foreach (int num in newNumbers)
+          ///  {
+          ///      Console.Write(num + " "); // Output: 1 2 3 4 5
+          ///  }
+            #endregion
+
 
         }
     }
