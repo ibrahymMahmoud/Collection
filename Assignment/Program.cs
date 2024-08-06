@@ -242,23 +242,48 @@ namespace Assignment
             //Create an employee directory where employee IDs (int) are keys and employee names (string) are values.
             //Use a SortedList to manage and retrieve employees in order of their IDs.
 
-          ///  Employee Employee01 = new Employee(0 , "hema");
-          ///  Employee Employee02 = new Employee(1, "hamo");
-          ///  Employee Employee03 = new Employee(3, "hamam");
-          ///  Employee Employee04 = new Employee(4, "hamody");
-          ///
-          ///  SortedDictionary<int, string> Employees = new SortedDictionary<int, string>()
-          ///  {
-          ///      { Employee01.id  , Employee01.name },
-          ///      { Employee02.id  , Employee02.name },
-          ///      { Employee03.id  , Employee03.name },
-          ///      { Employee04.id  , Employee04.name },
-          ///  };
-          ///
-          ///  foreach (var employee in Employees )
-          ///  {
-          ///      Console.WriteLine($"id = {employee.Key} , name = {employee.Value}");
-          ///  }
+            ///  Employee Employee01 = new Employee(0 , "hema");
+            ///  Employee Employee02 = new Employee(1, "hamo");
+            ///  Employee Employee03 = new Employee(3, "hamam");
+            ///  Employee Employee04 = new Employee(4, "hamody");
+            ///
+            ///  SortedDictionary<int, string> Employees = new SortedDictionary<int, string>()
+            ///  {
+            ///      { Employee01.id  , Employee01.name },
+            ///      { Employee02.id  , Employee02.name },
+            ///      { Employee03.id  , Employee03.name },
+            ///      { Employee04.id  , Employee04.name },
+            ///  };
+            ///
+            ///  foreach (var employee in Employees )
+            ///  {
+            ///      Console.WriteLine($"id = {employee.Key} , name = {employee.Value}");
+            ///  }
+            #endregion
+
+            #region Q08
+            //Given an array of integers from 1 to N with some numbers missing, find the missing numbers
+
+           ///  int[] nums = { 13, 14, 15, 1, 2, 3, 5, 6, 8,  10, 11, 12};
+           ///  int n = 15;
+           /// 
+           ///  HashSet<int> set = new HashSet<int>(nums);
+           ///  HashSet<int> missing = new HashSet<int>();
+           /// 
+           /// 
+           /// 
+           ///  for (int i = 1 ; i < n+1 ; i++)
+           ///  {
+           ///      if( !set.Contains(i))
+           ///          missing.Add(i);
+           ///  }
+           /// 
+           ///  Console.WriteLine("missing numbers:");
+           ///  if (missing.Count > 0)
+           ///      foreach (int i in missing)
+           ///          Console.WriteLine(i);
+           ///  else
+           ///      Console.WriteLine("no missing numbers");
             #endregion
         }
 
