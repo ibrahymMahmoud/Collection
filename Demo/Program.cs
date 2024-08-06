@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
 namespace Demo
@@ -103,7 +104,52 @@ namespace Demo
 
 
     #endregion
-    internal class Program
+
+    #region HashSet
+
+    class MovieIdComparer : IEqualityComparer<Movie>
+    {
+        public bool Equals(Movie? x, Movie? y)
+        {
+           return (x?.id.Equals(y?.id) ?? (y?.id == null ? true : false)) ;
+        }
+
+        public int GetHashCode([DisallowNull] Movie obj)
+        {
+            return HashCode.Combine(obj.id);
+          //  return obj.id.GetHashCode(); // two solution can do
+        }
+    }
+
+    class Movie : IEquatable<Movie> 
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public double price { get; set; }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(id, name, price);
+        }
+
+        public  bool Equals(Movie? obj)
+        {
+           
+            if (obj is not null)
+                return obj.id == this.id && obj.name == this.name && obj.price == this.price; 
+            return false;
+        }
+
+        public override string ToString()
+        {
+            return $"id = {this.id} , name = {this.name} , price = {this.price}";
+        }
+
+    }
+
+
+        #endregion
+        internal class Program
     {
         static void Main(string[] args)
         {
@@ -234,6 +280,51 @@ namespace Demo
             // dictionary more performance take O(1) the best if no need sorting
             // sortedDictionary if need sorting in add and remove take O(logn) ,  search take O(logn) // best in operation adding and deleting from sorted list
             // sortedList if need sorting in insert and update O(n)  in search take O(logn) // the best if need sorting and search
+            #endregion
+
+            #region Generic Collections - HashSet (Hashtable)
+          ///  //to store array only keys without value to be unique.
+          ///  int[] numbers = { 101, 2, 3, 4, 5, 6, 7, 8 };
+          ///  HashSet<int> set = new HashSet<int>(numbers);
+          ///  foreach(int i in set)
+          ///      Console.WriteLine(i);
+
+          ///  HashSet<Movie> movies = new HashSet<Movie>() 
+          ///  {
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=5 , name = "avatar" , price = 100},
+          ///      new Movie (){id=5 , name = "heloos" , price = 100},
+          ///      new Movie (){id=6 , name = "doblea" , price = 100},
+          ///      new Movie (){id=6 , name = "venous" , price = 100},
+          ///
+          ///  };
+          ///
+          ///  foreach (Movie movie in movies)
+          ///      Console.WriteLine(movie);
+          ///
+          ///  Console.WriteLine("----------------------------------");
+          ///
+          ///  HashSet<Movie> movs = new HashSet<Movie>(new MovieIdComparer())
+          ///  {
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=4 , name = "avatar" , price = 100},
+          ///      new Movie (){id=5 , name = "avatar" , price = 100},
+          ///      new Movie (){id=5 , name = "heloos" , price = 100},
+          ///      new Movie (){id=6 , name = "doblea" , price = 100},
+          ///      new Movie (){id=6 , name = "venous" , price = 100},
+          ///
+          ///  };
+          ///
+          ///  foreach (Movie movie in movs)
+          ///      Console.WriteLine(movie);
+
             #endregion
 
         }
