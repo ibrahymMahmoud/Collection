@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Xml.Linq;
 
 namespace Assignment
 {
@@ -310,35 +311,52 @@ namespace Assignment
             #region Q10
             //You have a hashtable with unique values, create a new hashtable where the keys and values are swapped.
 
-          ///  Hashtable hashtable = new Hashtable()
-          ///  {
-          ///      { 0 , "value 10" },
-          ///      { 1 , "value 99" },
-          ///      { 2 , "value 15" },
-          ///      { 3 , "value 30" },
-          ///      { 4 , "value 20" },
-          ///      { 5 , "value 12" }
-          ///  };
-          ///
-          ///  Hashtable hashtable2 = new Hashtable();
-          ///  foreach(DictionaryEntry item in hashtable)
-          ///  {
-          ///      hashtable2.Add(item.Value ?? " no value", item.Key);
-          ///  }
-          ///
-          ///  Console.WriteLine("before swaped hashTable");
-          ///
-          ///  foreach (DictionaryEntry item in hashtable)
-          ///  {
-          ///      Console.WriteLine($"key = {item.Key} , value = {item.Value}");
-          ///  }
-          ///  Console.WriteLine("--------------------------");
-          ///  Console.WriteLine("swaped hashTable");
-          ///
-          ///  foreach (DictionaryEntry item in hashtable2)
-          ///  {
-          ///      Console.WriteLine( $"key = {item.Key} , value = {item.Value}");
-          ///  }
+            ///  Hashtable hashtable = new Hashtable()
+            ///  {
+            ///      { 0 , "value 10" },
+            ///      { 1 , "value 99" },
+            ///      { 2 , "value 15" },
+            ///      { 3 , "value 30" },
+            ///      { 4 , "value 20" },
+            ///      { 5 , "value 12" }
+            ///  };
+            ///
+            ///  Hashtable hashtable2 = new Hashtable();
+            ///  foreach(DictionaryEntry item in hashtable)
+            ///  {
+            ///      hashtable2.Add(item.Value ?? " no value", item.Key);
+            ///  }
+            ///
+            ///  Console.WriteLine("before swaped hashTable");
+            ///
+            ///  foreach (DictionaryEntry item in hashtable)
+            ///  {
+            ///      Console.WriteLine($"key = {item.Key} , value = {item.Value}");
+            ///  }
+            ///  Console.WriteLine("--------------------------");
+            ///  Console.WriteLine("swaped hashTable");
+            ///
+            ///  foreach (DictionaryEntry item in hashtable2)
+            ///  {
+            ///      Console.WriteLine( $"key = {item.Key} , value = {item.Value}");
+            ///  }
+
+            #endregion
+
+            #region Q11
+            // Find the union of two sets, returning the unique elements from both sets.
+
+           ///  HashSet<int> set1 = new HashSet<int>() { 1 , 2 , 3 , 4 , 5 , 6 };
+           ///  HashSet<int> set2 = new HashSet<int>() { 1 , 5 , 6 , 7 , 8 , 9 };
+           /// 
+           /// 
+           /// 
+           ///  set1.UnionWith(set2);
+           /// 
+           ///  foreach (int i in set1)
+           ///      Console.WriteLine(i);
+            
+
 
             #endregion
 
