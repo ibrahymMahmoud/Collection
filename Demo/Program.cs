@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
@@ -283,48 +284,76 @@ namespace Demo
             #endregion
 
             #region Generic Collections - HashSet (Hashtable)
-          ///  //to store array only keys without value to be unique.
-          ///  int[] numbers = { 101, 2, 3, 4, 5, 6, 7, 8 };
-          ///  HashSet<int> set = new HashSet<int>(numbers);
-          ///  foreach(int i in set)
-          ///      Console.WriteLine(i);
+            ///  //to store array only keys without value to be unique.
+            ///  int[] numbers = { 101, 2, 3, 4, 5, 6, 7, 8 };
+            ///  HashSet<int> set = new HashSet<int>(numbers);
+            ///  foreach(int i in set)
+            ///      Console.WriteLine(i);
 
-          ///  HashSet<Movie> movies = new HashSet<Movie>() 
-          ///  {
-          ///      new Movie (){id=4 , name = "avatar" , price = 100},
-          ///      new Movie (){id=4 , name = "avatar" , price = 100},
-          ///      new Movie (){id=4 , name = "avatar" , price = 100},
-          ///      new Movie (){id=4 , name = "avatar" , price = 100},
-          ///      new Movie (){id=4 , name = "avatar" , price = 100},
-          ///      new Movie (){id=5 , name = "avatar" , price = 100},
-          ///      new Movie (){id=5 , name = "heloos" , price = 100},
-          ///      new Movie (){id=6 , name = "doblea" , price = 100},
-          ///      new Movie (){id=6 , name = "venous" , price = 100},
-          ///
-          ///  };
-          ///
-          ///  foreach (Movie movie in movies)
-          ///      Console.WriteLine(movie);
-          ///
-          ///  Console.WriteLine("----------------------------------");
-          ///
-          ///  HashSet<Movie> movs = new HashSet<Movie>(new MovieIdComparer())
-          ///  {
-          ///      new Movie (){id=4 , name = "avatar" , price = 100},
-          ///      new Movie (){id=4 , name = "avatar" , price = 100},
-          ///      new Movie (){id=4 , name = "avatar" , price = 100},
-          ///      new Movie (){id=4 , name = "avatar" , price = 100},
-          ///      new Movie (){id=4 , name = "avatar" , price = 100},
-          ///      new Movie (){id=5 , name = "avatar" , price = 100},
-          ///      new Movie (){id=5 , name = "heloos" , price = 100},
-          ///      new Movie (){id=6 , name = "doblea" , price = 100},
-          ///      new Movie (){id=6 , name = "venous" , price = 100},
-          ///
-          ///  };
-          ///
-          ///  foreach (Movie movie in movs)
-          ///      Console.WriteLine(movie);
+            ///  HashSet<Movie> movies = new HashSet<Movie>() 
+            ///  {
+            ///      new Movie (){id=4 , name = "avatar" , price = 100},
+            ///      new Movie (){id=4 , name = "avatar" , price = 100},
+            ///      new Movie (){id=4 , name = "avatar" , price = 100},
+            ///      new Movie (){id=4 , name = "avatar" , price = 100},
+            ///      new Movie (){id=4 , name = "avatar" , price = 100},
+            ///      new Movie (){id=5 , name = "avatar" , price = 100},
+            ///      new Movie (){id=5 , name = "heloos" , price = 100},
+            ///      new Movie (){id=6 , name = "doblea" , price = 100},
+            ///      new Movie (){id=6 , name = "venous" , price = 100},
+            ///
+            ///  };
+            ///
+            ///  foreach (Movie movie in movies)
+            ///      Console.WriteLine(movie);
+            ///
+            ///  Console.WriteLine("----------------------------------");
+            ///
+            ///  HashSet<Movie> movs = new HashSet<Movie>(new MovieIdComparer())
+            ///  {
+            ///      new Movie (){id=4 , name = "avatar" , price = 100},
+            ///      new Movie (){id=4 , name = "avatar" , price = 100},
+            ///      new Movie (){id=4 , name = "avatar" , price = 100},
+            ///      new Movie (){id=4 , name = "avatar" , price = 100},
+            ///      new Movie (){id=4 , name = "avatar" , price = 100},
+            ///      new Movie (){id=5 , name = "avatar" , price = 100},
+            ///      new Movie (){id=5 , name = "heloos" , price = 100},
+            ///      new Movie (){id=6 , name = "doblea" , price = 100},
+            ///      new Movie (){id=6 , name = "venous" , price = 100},
+            ///
+            ///  };
+            ///
+            ///  foreach (Movie movie in movs)
+            ///      Console.WriteLine(movie);
 
+            #endregion
+
+            #region HashSet - Constructors
+           /// //their 6 constructors overloading
+           ///
+           /// // prameterless constructor
+           /// HashSet<int> mySet01 = new HashSet<int>();
+           ///
+           /// // Constructor that takes an IEnumerable<T>
+           /// List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+           /// HashSet<int> mySet02 = new HashSet<int>(numbers);
+           ///
+           /// // Constructor that takes an IEnumerable<T> and an IEqualityComparer<T>
+           /// Dictionary<string, int> data = new Dictionary<string, int>
+           /// {
+           ///     {"apple", 1 },
+           ///     {"banana", 2 },
+           ///     {"cherry", 3 }
+           /// };
+           ///
+           /// //Constructor that takes capacity
+           ///
+           /// int capacity=  5 ;
+           /// HashSet<int> mySet03 = new HashSet<int>( capacity) { };
+           ///
+           /// // constructor take enmerator and capacity
+
+           
             #endregion
 
         }
