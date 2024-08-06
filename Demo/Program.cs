@@ -6,7 +6,7 @@ namespace Demo
     #region Generic Collections - Dictionary (Hashtable)
 
 
-    class Employee01 : IEqualityComparer
+    class Employee01 : IEqualityComparer , IComparer<Employee01> , IComparable<Employee01>
     {
         public int id { get; set; }
         public string? name { get; set; }
@@ -35,6 +35,23 @@ namespace Demo
         public int GetHashCode(object obj)
         {
             return HashCode.Combine(id, name);
+        }
+
+        public int Compare(Employee01? x, Employee01? y)
+        {
+            return( x?.id.CompareTo(y?.id) ?? (y?.id == null ?  0 : -1) ) ;
+        }
+
+       // // for sort assiending
+       // public int CompareTo(Employee01? other)
+       // {
+       //     return other?.id.CompareTo(this?.id) ?? (this?.id == null ? 0 : -1) ;
+       // }
+
+        // for sort des
+        public int CompareTo(Employee01? other)
+        {
+            return this?.id.CompareTo(other?.id) ?? (other?.id == null ? 0 : -1);
         }
     }
 
@@ -135,31 +152,70 @@ namespace Demo
             #endregion
 
             #region Generic Collections - Dictionary (Hashtable)
-          ///  Dictionary<string, double> dic = new Dictionary<string, double>()
-          ///  {
-          ///      {"ahmed" , 565556565 },
-          ///      {"aliaa" , 559655418 },
-          ///      {"hosam" , 485485485 },
-          ///      {"memmo" , 524848854 }
-          ///  };
-          ///  foreach(var note in dic)
-          ///      Console.WriteLine($"key = {note.Key} , value = {note.Value}");
-          ///
-          ///  dic.Add("asmaa", 85484854);
-          ///  dic.TryAdd("asmaa", 8548454);
-          ///  dic.ContainsKey("asmaa");
-          ///  dic.Clear();//to clear dic
-          ///  
-          ///  Dictionary<Employee01, double> emps = new Dictionary<Employee01, double>()
-          ///  {
-          ///      { new Employee01(){ id=10 , name = "salay" } , 565556565 },
-          ///      { new Employee01(){id=10 , name = "salay"} , 565556565 },
-          ///      { new Employee01(){id=10 , name = "salay"} , 565556565 }
-          ///
-          ///  };
+            ///  Dictionary<string, double> dic = new Dictionary<string, double>()
+            ///  {
+            ///      {"ahmed" , 565556565 },
+            ///      {"aliaa" , 559655418 },
+            ///      {"hosam" , 485485485 },
+            ///      {"memmo" , 524848854 }
+            ///  };
+            ///  foreach(var note in dic)
+            ///      Console.WriteLine($"key = {note.Key} , value = {note.Value}");
+            ///
+            ///  dic.Add("asmaa", 85484854);
+            ///  dic.TryAdd("asmaa", 8548454);
+            ///  dic.ContainsKey("asmaa");
+            ///  dic.Clear();//to clear dic
+            ///  
+            ///  Dictionary<Employee01, double> emps = new Dictionary<Employee01, double>()
+            ///  {
+            ///      { new Employee01(){ id=10 , name = "salay" } , 565556565 },
+            ///      { new Employee01(){id=10 , name = "salay"} , 565556565 },
+            ///      { new Employee01(){id=10 , name = "salay"} , 565556565 }
+            ///
+            ///  };
 
 
             #endregion
+
+            #region Generic Collections - SortedDictionary (BST)
+
+         //   SortedDictionary<string , int > keyValuePairs = new SortedDictionary<string , int>()
+         //   {
+         //       { "ahmed" , 551515 },
+         //       { "zezoo" , 848548 },
+         //       { "memoo" , 965965 },
+         //       { "fegoo" , 485485 }
+         //   };
+         //   foreach(var  keyValue in keyValuePairs)
+         //       Console.WriteLine(keyValue.Key);
+         //
+         //   keyValuePairs.Add("moazz", 4854854);
+         //
+         //   Console.WriteLine("--------------");
+         //
+         //   foreach (var keyValue in keyValuePairs)
+         //       Console.WriteLine(keyValue.Key);
+         //
+         //   // for sort must implement interface of Icompareable
+         //   SortedDictionary<Employee01, double> dic = new SortedDictionary<Employee01, double>()
+         //   {
+         //       { new Employee01(){id = 5 , name = "ahmed"} , 565556565 },
+         //       { new Employee01(){id = 7 , name = "ahmed"} , 565556565 },
+         //       { new Employee01(){id = 1 , name = "ahmed"} , 565556565 },
+         //       { new Employee01(){id = 3 , name = "ahmed"} , 565556565 },
+         //       { new Employee01(){id = 2 , name = "ahmed"} , 565556565 }
+         //   };
+         //
+         //   Console.WriteLine("--------------");
+         //
+         //   foreach (var keyValue in dic)
+         //       Console.WriteLine(keyValue.Key.id);
+
+
+            #endregion
+
+
         }
     }
 }
