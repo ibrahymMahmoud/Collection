@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Diagnostics.Metrics;
 using System.Xml.Linq;
 
 namespace Assignment
@@ -346,16 +347,57 @@ namespace Assignment
             #region Q11
             // Find the union of two sets, returning the unique elements from both sets.
 
-           ///  HashSet<int> set1 = new HashSet<int>() { 1 , 2 , 3 , 4 , 5 , 6 };
-           ///  HashSet<int> set2 = new HashSet<int>() { 1 , 5 , 6 , 7 , 8 , 9 };
-           /// 
-           /// 
-           /// 
-           ///  set1.UnionWith(set2);
-           /// 
-           ///  foreach (int i in set1)
-           ///      Console.WriteLine(i);
-            
+            ///  HashSet<int> set1 = new HashSet<int>() { 1 , 2 , 3 , 4 , 5 , 6 };
+            ///  HashSet<int> set2 = new HashSet<int>() { 1 , 5 , 6 , 7 , 8 , 9 };
+            /// 
+            /// 
+            /// 
+            ///  set1.UnionWith(set2);
+            /// 
+            ///  foreach (int i in set1)
+            ///      Console.WriteLine(i);
+
+
+
+            #endregion
+
+            #region Q12
+           //  You have a dictionary with string keys, the user will enter targetChar, count how many keys start with this targetChar.
+           //         Ex:
+           //         Input:
+           //                {“apple”,1},
+           //                {“animal”,2},
+           //                {“airport”,3}
+           //
+           //                     a
+           //        Output:
+           //                     3
+
+          ///  Dictionary<string , int> dic = new Dictionary<string , int>()
+          ///  {
+          ///      { "apple" , 1 },
+          ///      { "anans" , 2 },
+          ///      { "astafandy" , 5 },
+          ///      { "orange" , 8 },
+          ///      { "batekh" , 8 },
+          ///      { "bortocal" , 12 },
+          ///      { "beach" , 84 }
+          ///  };
+          ///
+          ///  char Char;
+          ///  do
+          ///  {
+          ///      Console.Write("Enter char: ");
+          ///  } while ( !char.TryParse(Console.ReadLine(), out Char) || char.IsWhiteSpace(Char) || char.IsDigit(Char) );
+          ///
+          ///  int CharCounter = 0;
+          ///  foreach (var key in dic.Keys)
+          ///  {
+          ///      if (key[0] == Char)
+          ///          CharCounter++;
+          ///  }
+          ///
+          ///  Console.WriteLine($"count of keys start with this targetChar ({Char}) = {CharCounter}");
 
 
             #endregion
