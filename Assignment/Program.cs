@@ -362,42 +362,75 @@ namespace Assignment
             #endregion
 
             #region Q12
-           //  You have a dictionary with string keys, the user will enter targetChar, count how many keys start with this targetChar.
-           //         Ex:
-           //         Input:
-           //                {“apple”,1},
-           //                {“animal”,2},
-           //                {“airport”,3}
-           //
-           //                     a
-           //        Output:
-           //                     3
+            //  You have a dictionary with string keys, the user will enter targetChar, count how many keys start with this targetChar.
+            //         Ex:
+            //         Input:
+            //                {“apple”,1},
+            //                {“animal”,2},
+            //                {“airport”,3}
+            //
+            //                     a
+            //        Output:
+            //                     3
 
-          ///  Dictionary<string , int> dic = new Dictionary<string , int>()
-          ///  {
-          ///      { "apple" , 1 },
-          ///      { "anans" , 2 },
-          ///      { "astafandy" , 5 },
-          ///      { "orange" , 8 },
-          ///      { "batekh" , 8 },
-          ///      { "bortocal" , 12 },
-          ///      { "beach" , 84 }
-          ///  };
-          ///
-          ///  char Char;
-          ///  do
-          ///  {
-          ///      Console.Write("Enter char: ");
-          ///  } while ( !char.TryParse(Console.ReadLine(), out Char) || char.IsWhiteSpace(Char) || char.IsDigit(Char) );
-          ///
-          ///  int CharCounter = 0;
-          ///  foreach (var key in dic.Keys)
-          ///  {
-          ///      if (key[0] == Char)
-          ///          CharCounter++;
-          ///  }
-          ///
-          ///  Console.WriteLine($"count of keys start with this targetChar ({Char}) = {CharCounter}");
+            ///  Dictionary<string , int> dic = new Dictionary<string , int>()
+            ///  {
+            ///      { "apple" , 1 },
+            ///      { "anans" , 2 },
+            ///      { "astafandy" , 5 },
+            ///      { "orange" , 8 },
+            ///      { "batekh" , 8 },
+            ///      { "bortocal" , 12 },
+            ///      { "beach" , 84 }
+            ///  };
+            ///
+            ///  char Char;
+            ///  do
+            ///  {
+            ///      Console.Write("Enter char: ");
+            ///  } while ( !char.TryParse(Console.ReadLine(), out Char) || char.IsWhiteSpace(Char) || char.IsDigit(Char) );
+            ///
+            ///  int CharCounter = 0;
+            ///  foreach (var key in dic.Keys)
+            ///  {
+            ///      if (key[0] == Char)
+            ///          CharCounter++;
+            ///  }
+            ///
+            ///  Console.WriteLine($"count of keys start with this targetChar ({Char}) = {CharCounter}");
+
+
+            #endregion
+
+            #region Q13
+            //You have a sorted set , user will enter an integer target, find all elements that is greater than target and add them in list.
+
+         ///   HashSet<int> set = new HashSet<int>() { 1, 2 , 3 , 5 , 7 , 8 , 9 , 10 , 11 , 12 };
+         ///
+         ///   int number;
+         ///   do
+         ///   {
+         ///       Console.Write("Enter a number: ");
+         ///   }while ( !int.TryParse(Console.ReadLine() , out number ));
+         ///
+         ///   HashSet<int> greater = new HashSet<int>() ;
+         ///
+         ///   foreach( int i in set ) 
+         ///       if( number < i)
+         ///           greater.Add(i);
+         ///
+         ///   Console.WriteLine($"Numbers is greater than {number}");
+         ///   foreach (int i in greater)
+         ///       Console.WriteLine(i);
+         ///
+         ///   if (greater.Count == 0)
+         ///       Console.WriteLine($"No numbers greater than {number}");
+         ///
+
+
+
+
+
 
 
             #endregion
