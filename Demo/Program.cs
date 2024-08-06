@@ -180,41 +180,55 @@ namespace Demo
 
             #region Generic Collections - SortedDictionary (BST)
 
-         //   SortedDictionary<string , int > keyValuePairs = new SortedDictionary<string , int>()
-         //   {
-         //       { "ahmed" , 551515 },
-         //       { "zezoo" , 848548 },
-         //       { "memoo" , 965965 },
-         //       { "fegoo" , 485485 }
-         //   };
-         //   foreach(var  keyValue in keyValuePairs)
-         //       Console.WriteLine(keyValue.Key);
-         //
-         //   keyValuePairs.Add("moazz", 4854854);
-         //
-         //   Console.WriteLine("--------------");
-         //
-         //   foreach (var keyValue in keyValuePairs)
-         //       Console.WriteLine(keyValue.Key);
-         //
-         //   // for sort must implement interface of Icompareable
-         //   SortedDictionary<Employee01, double> dic = new SortedDictionary<Employee01, double>()
-         //   {
-         //       { new Employee01(){id = 5 , name = "ahmed"} , 565556565 },
-         //       { new Employee01(){id = 7 , name = "ahmed"} , 565556565 },
-         //       { new Employee01(){id = 1 , name = "ahmed"} , 565556565 },
-         //       { new Employee01(){id = 3 , name = "ahmed"} , 565556565 },
-         //       { new Employee01(){id = 2 , name = "ahmed"} , 565556565 }
-         //   };
-         //
-         //   Console.WriteLine("--------------");
-         //
-         //   foreach (var keyValue in dic)
-         //       Console.WriteLine(keyValue.Key.id);
+            //   SortedDictionary<string , int > keyValuePairs = new SortedDictionary<string , int>()
+            //   {
+            //       { "ahmed" , 551515 },
+            //       { "zezoo" , 848548 },
+            //       { "memoo" , 965965 },
+            //       { "fegoo" , 485485 }
+            //   };
+            //   foreach(var  keyValue in keyValuePairs)
+            //       Console.WriteLine(keyValue.Key);
+            //
+            //   keyValuePairs.Add("moazz", 4854854);
+            //
+            //   Console.WriteLine("--------------");
+            //
+            //   foreach (var keyValue in keyValuePairs)
+            //       Console.WriteLine(keyValue.Key);
+            //
+            //   // for sort must implement interface of Icompareable
+            //   SortedDictionary<Employee01, double> dic = new SortedDictionary<Employee01, double>()
+            //   {
+            //       { new Employee01(){id = 5 , name = "ahmed"} , 565556565 },
+            //       { new Employee01(){id = 7 , name = "ahmed"} , 565556565 },
+            //       { new Employee01(){id = 1 , name = "ahmed"} , 565556565 },
+            //       { new Employee01(){id = 3 , name = "ahmed"} , 565556565 },
+            //       { new Employee01(){id = 2 , name = "ahmed"} , 565556565 }
+            //   };
+            //
+            //   Console.WriteLine("--------------");
+            //
+            //   foreach (var keyValue in dic)
+            //       Console.WriteLine(keyValue.Key.id);
 
 
             #endregion
 
+            #region Generic Collections - SortedList (TwoArray)
+            // different between sortedlist and sorteddictionary
+            // sorteddictionary is more faster take O(logn)
+            // list is two array.
+          ///  SortedList<string , int > keyValuePairs = new SortedList<string , int>()
+          ///  {
+          ///      { "ahmed" , 5652 } ,
+          ///      { "zaina" , 7458 } ,
+          ///      { "marim" , 5654 }
+          ///  };
+          ///
+          ///  foreach(var key in keyValuePairs)
+          ///      Console.WriteLine(key.Key);
+            #endregion
 
         }
     }
