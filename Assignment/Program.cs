@@ -405,27 +405,27 @@ namespace Assignment
             #region Q13
             //You have a sorted set , user will enter an integer target, find all elements that is greater than target and add them in list.
 
-         ///   HashSet<int> set = new HashSet<int>() { 1, 2 , 3 , 5 , 7 , 8 , 9 , 10 , 11 , 12 };
-         ///
-         ///   int number;
-         ///   do
-         ///   {
-         ///       Console.Write("Enter a number: ");
-         ///   }while ( !int.TryParse(Console.ReadLine() , out number ));
-         ///
-         ///   HashSet<int> greater = new HashSet<int>() ;
-         ///
-         ///   foreach( int i in set ) 
-         ///       if( number < i)
-         ///           greater.Add(i);
-         ///
-         ///   Console.WriteLine($"Numbers is greater than {number}");
-         ///   foreach (int i in greater)
-         ///       Console.WriteLine(i);
-         ///
-         ///   if (greater.Count == 0)
-         ///       Console.WriteLine($"No numbers greater than {number}");
-         ///
+            ///   HashSet<int> set = new HashSet<int>() { 1, 2 , 3 , 5 , 7 , 8 , 9 , 10 , 11 , 12 };
+            ///
+            ///   int number;
+            ///   do
+            ///   {
+            ///       Console.Write("Enter a number: ");
+            ///   }while ( !int.TryParse(Console.ReadLine() , out number ));
+            ///
+            ///   HashSet<int> greater = new HashSet<int>() ;
+            ///
+            ///   foreach( int i in set ) 
+            ///       if( number < i)
+            ///           greater.Add(i);
+            ///
+            ///   Console.WriteLine($"Numbers is greater than {number}");
+            ///   foreach (int i in greater)
+            ///       Console.WriteLine(i);
+            ///
+            ///   if (greater.Count == 0)
+            ///       Console.WriteLine($"No numbers greater than {number}");
+            ///
 
 
 
@@ -435,9 +435,37 @@ namespace Assignment
 
             #endregion
 
+            #region Q14
+          ///  //You have a sorted list with integer values, find all the keys associated with even values.
+          ///
+          ///  // list with even numbers
+          ///  List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+          ///  // list with non even numbers
+          ///  List<int> numbers02 = new List<int> { 1,  3, 5, 7,  11 };
+          ///
+          ///
+          ///  bool flag = true; // check if no even numbers
+          ///  for (int i = 0; i < numbers02.Count; i++)
+          ///  {
+          ///      if (numbers02[i] % 2 == 0)
+          ///      {
+          ///          flag = false;
+          ///          Console.WriteLine($"Index of Keys of even values: {i} , with value = {numbers[i]}" );
+          ///      }
+          ///  }
+          ///
+          ///  if(flag)
+          ///      Console.WriteLine("no even numbers in list");
+          ///      
+            #endregion
+
 
         }
 
 
+
     }
+
+
+    
 }
